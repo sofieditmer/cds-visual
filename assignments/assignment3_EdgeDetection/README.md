@@ -27,7 +27,7 @@ source cv101/bin/activate
 cd assignments/assignment3_EdgeDetetion
 ```
 
-5. Run the edge_detection.py script within the cv101 environment. You can run the script on the provided image in the data folder called "jefferson_memorial.jpeg" an specify the following parameters:
+5. Run the edge_detection.py script within the cv101 environment. You can run the script on the provided image in the data folder called "jefferson_memorial.jpeg" and specify the following parameters:
 
 `-i:` path to the image <br>
 `-r:` the x and y coordinates of the ROI (region of interest). You should specify these as four integers, x1 y1 x2 y2, separated by whitespace. x1 y1 are the coordinates of the top-left corner of the ROI, while x2 y2 are coordinates of the bottom-right corner of the ROI. <br>
@@ -42,4 +42,4 @@ python3 edge_detection.py -i ../../data/img/jefferson_memorial.jpeg -r 1400 880 
 When running the edge_detection.py script you will get three outputs saved in the specified output directory:
 1. {image_name}_with_ROI.jpg which is the original image with a green rectangle (ROI)
 2. {image_name}_cropped.jpg which is the original image cropped to only contain the ROI.
-3. {image_name]_letters.jpg which is the cropped image with green contours around the detected letters. 
+3. {image_name}_letters.jpg which is the cropped image with green contours around the detected letters. 
