@@ -1,9 +1,9 @@
 # Assignment 3: Edge Detection
 
-__Description of task: Finding text using edge detection__ <br>
+### Description of task: Finding text using edge detection <br>
 The purpose of this assignment is to use computer vision to extract specific features from images. In particular, we're going to see if we can find text. We are not interested in finding whole words right now; we'll look at how to find whole words in a coming class. For now, we only want to find language-like objects, such as letters and punctuation.
 
-__Running the script__ <br>
+### Running the script <br>
 Step-by-step-guide:
 
 1. Clone the repository
@@ -38,7 +38,7 @@ Example: <br>
 python3 edge_detection.py -i ../../data/img/jefferson_memorial.jpeg -r 1400 880 2900 2800 -o output/
 ```
 
-__Output__ <br>
+### Output <br>
 When running the edge_detection.py script you will get three outputs saved in the specified output directory:
 1. {image_name}_with_ROI.jpg which is the original image with a green rectangle (ROI)
 2. {image_name}_cropped.jpg which is the original image cropped to only contain the ROI.
