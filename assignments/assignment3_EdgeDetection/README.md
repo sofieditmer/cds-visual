@@ -24,7 +24,7 @@ source cv101/bin/activate
 
 4. Navigate to the assignment folder containing the edge_detection.py script
 ```
-cd assignments/assignment3_EdgeDetetion
+cd assignments/assignment3_EdgeDetection
 ```
 
 5. Run the edge_detection.py script within the cv101 environment. You can run the script on the provided image in the data folder called "jefferson_memorial.jpeg" and specify the following parameters:
