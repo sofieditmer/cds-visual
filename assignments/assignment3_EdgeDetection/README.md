@@ -1,9 +1,9 @@
 # Assignment 3: Edge Detection
 
-__Description of task: Finding text using edge detection__
+__Description of task: Finding text using edge detection__ <br>
 The purpose of this assignment is to use computer vision to extract specific features from images. In particular, we're going to see if we can find text. We are not interested in finding whole words right now; we'll look at how to find whole words in a coming class. For now, we only want to find language-like objects, such as letters and punctuation.
 
-__Running the script__
+__Running the script__ <br>
 Step-by-step-guide:
 
 1. Clone the repository
@@ -29,16 +29,16 @@ cd assignments/assignment3_EdgeDetetion
 
 5. Run the edge_detection.py script within the cv101 environment. You can run the script on the provided image in the data folder called "jefferson_memorial.jpeg" an specify the following parameters:
 
-`-i:` path to the image
-`-r:` the x and y coordinates of the ROI (region of interest). You should specify these as four integers, x1 y1 x2 y2, separated by whitespace. x1 y1 are the coordinates of the top-left corner of the ROI, while x2 y2 are coordinates of the bottom-right corner of the ROI.
+`-i:` path to the image <br>
+`-r:` the x and y coordinates of the ROI (region of interest). You should specify these as four integers, x1 y1 x2 y2, separated by whitespace. x1 y1 are the coordinates of the top-left corner of the ROI, while x2 y2 are coordinates of the bottom-right corner of the ROI. <br>
 `-o:` path to output directory
 
-Example:
+Example: <br>
 ```
 python3 edge_detection.py -i ../../data/img/jefferson_memorial.jpeg -r 1400 880 2900 2800 -o output/
 ```
 
-__Output__
+__Output__ <br>
 When running the edge_detection.py script you will get three outputs saved in the specified output directory:
 1. {image_name}_with_ROI.jpg which is the original image with a green rectangle (ROI)
 2. {image_name}_cropped.jpg which is the original image cropped to only contain the ROI.
