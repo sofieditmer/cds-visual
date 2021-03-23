@@ -6,6 +6,7 @@ Given the full MNIST data set, a Logistic Regression Classifier is trained, and 
 Parameters:
     input_dataset: str <path-to-dataset>
     test_size: num <size-of-test-data>
+    unseen_img: str <path-to-unseen-image>
     
 Usage:
     lr-mnist.py --input_dataset <path-to-dataset> --test_size <size-of-test-data>
@@ -25,6 +26,7 @@ sys.path.append(os.path.join(".."))
 import numpy as np
 import pandas as pd
 import io
+import cv2
 import matplotlib.pyplot as plt
 import utils.classifier_utils as clf_util
 from sklearn import metrics
@@ -55,12 +57,22 @@ def main():
                     help = "Define the size of the test dataset", 
                     default = 0.2)
     
+    # Argument 3: unseen image
+    ap.add_argument(
+        "-u",
+        "--unseen_img", 
+        type = str,
+        default = None, # If the user does not specify an image, this argument will be None
+        required = False,
+        help = "Specify path to an unseen image that you want to process and use the trained logistic regression model to predict the value of")
+   
     # Parse arguments
     args = vars(ap.parse_args())
     
     # Save input parameters
     dataset = args["input_dataset"]
     size_test = args["test_size"]
+    unseen_img = args["unseen_img"]
     
     # Create output directory
     if not os.path.exists(os.path.join("..", "output")):
@@ -113,6 +125,21 @@ def main():
     
     # Save confusion matrix as .png to output folder
     plt.savefig(os.path.join("..", "output", "confusion_matrix.png"), dpi = 300, bbox_inches = "tight")
+    
+    # If the user has specified an unseen image 
+    if unseen_img != None:
+        # Read image
+        image = cv2.imread(unseen_img)
+        # Define classes
+        classes = sorted(set(y))
+        nclasses = len(classes)
+        # Convert to grayscale
+        gray = cv2.bitwise_not(cv2.cvtColor(image, cv2.COLOR_BGR2GRAY))
+        # Compress image to 28x28 which is the same as the images in the training data that the model has been trained on
+        compressed = cv2.resize(gray, (28, 28), interpolation=cv2.INTER_AREA)
+        # Extract the model's predictions for this unseen image
+        print(f"\n[INFO] Prediction for unseen image, {unseen_img}:\n") # User message
+        clf_util.predict_unseen(compressed, clf, classes) # Model prediction
     
     # User message
     print("\n[INFO] Done! You have now performed the logistic regression classification. Classification metrics are saved in output directory together with the confusion matrix\n")
