@@ -14,8 +14,7 @@ Example:
     $ python lr-mnist.py --test_size 0.2 --epochs 1000
 
 Output:
-    classification metrics printed to the terminal
-
+    nn_classification_metrics.csv: Neural network classification metrics
 """
 
 ### DEPENDENCIES ###
