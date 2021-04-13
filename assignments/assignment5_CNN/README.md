@@ -1,13 +1,10 @@
 ## Assignment 5 - CNNs on cultural image data
-__Description__: Multi-class classification of impressionist painters
-
-__Data__ <br>
-You can find the full dataset used for this here: https://www.kaggle.com/delayedkarma/impressionist-classifier-data. A subset of the dataset is provided in the data-folder. 
-
 
 __Task__ <br>
 Build a deep learning model using convolutional neural networks which classify paintings by their respective artists.
 
+__Data__ <br>
+You can find the full dataset used for this here: https://www.kaggle.com/delayedkarma/impressionist-classifier-data. A subset of the dataset is provided in the data-folder.
 
 __Running the script__ <br>
 Step-by-step-guide:
@@ -47,4 +44,4 @@ The following files will be saved in the out/:
 1. LeNet_model.png: visualization of the LeNet model structure.
 2. model_summary.txt: summary of the LeNet model structure.
 3. model_history.png: visualization showing loss/accuracy of the model during training.
-4. classification_report.txt: classification report
+4. classification_report.txt: classification report.
