@@ -38,7 +38,7 @@ $ python cnn-artists.py
 Optional parameters can be set if one wishes to tweak the hyperparameters of the LeNet model. However, default parameters are specified which means that the script can simple be run with the above-mentioned command. 
 
 __Output__ <br>
-The following files will be saved in the out/:
+The following files will be saved in the out/ folder: 
 1. LeNet_model.png: visualization of the LeNet model structure.
 2. model_summary.txt: summary of the LeNet model structure.
 3. model_history.png: visualization showing loss/accuracy of the model during training.
