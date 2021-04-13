@@ -7,8 +7,6 @@ __Data__ <br>
 You can find the full dataset used for this here: https://www.kaggle.com/delayedkarma/impressionist-classifier-data. A subset of the dataset is provided in the data-folder.
 
 __Running the script__ <br>
-Step-by-step-guide:
-
 1. Clone the repository
 ```
 git clone https://github.com/sofieditmer/cds-visual.git cds-visual-sd
@@ -37,7 +35,7 @@ Example: <br>
 $ python cnn-artists.py
 ```
 
-Optional parameters can be set if one wishes to tweek the hyperparameters of the LeNet model. However, default parameters are specified which means that the script can simple be run with the above-mentioned command. 
+Optional parameters can be set if one wishes to tweak the hyperparameters of the LeNet model. However, default parameters are specified which means that the script can simple be run with the above-mentioned command. 
 
 __Output__ <br>
 The following files will be saved in the out/:
