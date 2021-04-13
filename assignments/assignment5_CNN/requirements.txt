@@ -1,5 +1,7 @@
-sklearn
-seaborn
+sklearn==0.0
+seaborn==0.11.1
 numpy==1.19.5
 pandas==1.1.5
 matplotlib==3.3.4
+tensorflow==2.4.1
+tqdm==4.60.0
